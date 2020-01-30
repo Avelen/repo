@@ -1,0 +1,74 @@
+$b: 'first-screen';
+
+.#{$b} {
+
+	.absolute-background{
+		width: 100%;
+		background: url(../../img/bg.jpg)no-repeat center 0;
+		top: 0;
+		right: 0;
+		left: 0;
+		height: 1400px;
+		position: absolute;
+		background-size: 1400px;
+
+		&:before{
+			content: '';
+		    width: 100%;
+		    left: 0;
+		    height: 100%;
+		    background: #2e9aff;
+		    display: block;
+		    position: absolute;
+		    z-index: -1;
+		    bottom: 0;
+		    top: 0;
+		}
+		&:after{
+    	    content: '';
+		    width: 100%;
+		    left: 0;
+		    right: 0;
+		    bottom: -55%;
+		    height: 100%;
+		    background: url(../../img/wave2.png) no-repeat;
+		    display: block;
+		    position: absolute;
+		    z-index: -1;
+		    background-size: cover;
+	    }
+	}
+
+
+	&__block{
+
+		padding: 10%;
+
+		&__absolute-text{
+		    color: $text-white;
+			@extend %absolute-text;
+
+			&:before{
+				@extend %absolute-text-before;
+				background: $bg-white;
+			}
+		}
+
+		&__title{
+			font-size: 78px;
+			line-height: 74px;			    
+		    margin: 0 0 30px;
+		    font-weight: 600;
+		}
+
+		&__description{
+			font-family: $open-sans;
+			font-style: 14px;
+		}
+
+		&__button{
+			margin: 40px 0;
+		}
+
+	}
+}

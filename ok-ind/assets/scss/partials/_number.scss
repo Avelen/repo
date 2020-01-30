@@ -1,0 +1,18 @@
+$n: 'number';
+
+.#{$n}{
+
+	padding: 100px 0;
+
+	&__num{
+		margin-top: 30px;
+	}
+
+	&__text{
+		font-size: 24px;
+	    font-weight: 600;
+	    line-height: 26px;
+	    margin-top: 30px;
+	}
+
+}

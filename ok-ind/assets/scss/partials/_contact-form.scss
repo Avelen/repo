@@ -1,0 +1,62 @@
+$c: 'contact-form';
+
+.#{$c} {
+
+	margin-top: -250px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    position: relative;
+    background: $bg-blue;
+
+    &.children-page{
+    	margin-bottom: -250px;
+    }
+
+    .container{
+    	position: relative;
+    }
+
+    &:after{
+    	content: '';
+	    width: 100%;
+	    left: 0;
+	    right: 0;
+	    bottom: -10%;
+	    height: 450px;
+	    background: url(../../img/wave.png) no-repeat;
+	    display: block;
+	    position: absolute;
+	    z-index: 1;
+	    background-size: cover;
+    }
+
+	&__absolute-text{
+	    color: $text-white;
+		@extend %absolute-text;
+
+		&:before{
+			@extend %absolute-text-before;
+			background: $bg-white;
+		}
+	}
+
+	&__block{
+
+		background: url(../../img/form-bg-img.jpg)no-repeat center;
+		padding: 100px 0;
+		overflow: hidden;
+
+		&__title{
+			font-size: 78px;
+		    line-height: 74px;
+		    margin: 0 0 30px;
+		    font-weight: 600;
+		}
+
+		&__description{
+			margin-bottom: 30px;
+		}
+
+	}
+
+}

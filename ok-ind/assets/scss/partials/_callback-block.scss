@@ -1,0 +1,43 @@
+$c: 'callback-block';
+
+.#{$c} {
+
+	padding: 80px 0 195px;	
+	@extend %blue-gradient;
+	margin-bottom: -130px;
+
+	&.children-page{
+		padding: 150px 0 150px;
+    	margin-top: -90px;
+	}
+
+
+	&__caption{
+
+		&__title{
+
+			margin-bottom: 0;
+
+			&:before{
+				width: 2px;
+			    height: 85px;
+			    top: 5px;
+			    bottom: 0;
+			    left: -10px;
+			    background: $bg-white;
+			}
+
+		}
+
+		&__description{
+			font-size: 14px;
+			font-family: $open-sans;
+		}
+
+	}
+
+	&__button{
+		margin: 24px 0;
+	}
+
+}

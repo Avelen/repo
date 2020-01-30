@@ -1,0 +1,376 @@
+/* Default variables */
+@import "partials/colors";
+@import "fonts";
+
+/* Fonts */
+$font-default: 'Bebas Neue', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+
+/* Responsive breakpoint mixin */
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (max-width: 767px) { @content ; }
+  }
+  @else if $point == sm {
+    @media (max-width: 768px) { @content ; }
+  }
+  @else if $point == md {
+    @media (max-width: 992px) { @content ; }
+  }
+  @else if $point == lg {
+    @media (max-width: 1200px)  { @content ; }
+  }
+}
+
+
+/* Default styles */
+body {
+  font-family: $font-default;
+  font-size: 16px;
+  background: $bg-default;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+
+  img {
+    max-width: 100%;
+
+    &::-moz-selection{
+      background: $bg-yellow;
+      color: $text-default;
+    }
+    
+    &::selection{
+      background: $bg-yellow;
+      color: $text-default;
+    }
+  }
+
+  p, span{
+    font-family: $open-sans;
+
+    &::-moz-selection{
+      background: $bg-yellow;
+      color: $text-default;
+    }
+    
+    &::selection{
+      background: $bg-yellow;
+      color: $text-default;
+    }
+  }
+
+  [class*="description"]{
+    font-family: $open-sans;
+  }
+
+  [class*="title"]{
+    font-family: $font-default;
+  }
+
+  div{
+    outline: none!important;
+    
+    &::-moz-selection{
+      background: $bg-yellow;
+      color: $text-default;
+    }
+
+    &::selection{
+      background: $bg-yellow;
+      color: $text-default;
+    }
+  }
+
+  table{
+    width: 100%;
+    margin-bottom: 15px;
+
+    th, td{
+      padding: 10px;
+      border-bottom: 1px solid $text-link-hover;
+    }
+  }
+
+  .Himg {
+      float: left;
+      margin-right: 20px
+  }
+
+}
+h1, .h1{
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;  
+  clear: both;
+}
+h2, .h2{
+  font-size: 48px;
+  font-weight: 600;
+  position: relative;
+  clear: both;
+  margin: 0 0 30px;
+
+  &:before{
+    content: '';
+    width: 50px;
+    background: $bg-yellow;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+  }
+
+  &.text-center:before{
+    margin: auto;
+  }
+}
+
+h3{
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  clear: both;
+  margin: 0 0 30px;
+
+  &:before{
+    content: '';
+    width: 50px;
+    background: $bg-yellow;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+  }
+
+  &.text-center:before{
+    margin: auto;
+  }
+}
+
+a {
+  color: $text-link;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover{
+    color: $text-link-hover;
+    text-decoration: none;
+  }
+
+  &::-moz-selection{
+    background: $bg-yellow;
+    color: $text-default;
+  }
+  
+  &::selection{
+    background: $bg-yellow;
+    color: $text-default;
+  }
+}
+
+.white_text{
+  color: $text-white;
+}
+
+.black_text{
+  color: $text-default;
+}
+
+.justify-content-center{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calc_btn{
+    border-radius: 30px;
+    background: transparent;
+    border: 3px solid $bg-white;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-family: $open-sans;
+    color: $text-white;
+    cursor: pointer;
+    font-weight: 600;
+
+    a{
+      color: inherit;
+    }
+
+    &:hover{
+      box-shadow: 0 0 10px $shadow;
+      border: 3px solid $bg-yellow;
+      color: $text-default;
+      background: $bg-yellow;
+      box-shadow: none;
+
+        a{
+          color: inherit;
+        }
+    }
+}
+
+.order-call{
+    border-radius: 30px;
+    background: transparent;
+    border: 3px solid $text-link-hover;
+    padding: 10px 30px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 30px 0;
+    font-family: $open-sans;
+    color: $text-link-hover;
+    cursor: pointer;
+    font-weight: 600;
+
+    a{
+      color: inherit;
+    }
+
+    &:hover{
+      box-shadow: 0 0 10px $shadow;
+      border: 3px solid $bg-yellow;
+      color: $text-default;
+      background: $bg-yellow;
+      box-shadow: none;
+
+        a{
+          color: inherit;
+        }
+    } 
+}
+
+.mini-desc {
+    width: 50%;
+    margin: auto;
+    font-size: 12px;
+    font-family: $open-sans;
+    color: $text-sub;
+}
+
+.slick-next, .slick-prev{
+
+  width: 30px;
+  height: 55px;
+  z-index: 4;
+
+  &:before{
+    content: '';
+    width: 30px;
+    height: 55px;
+    background: url(../../img/slider-arrow.png)no-repeat;
+    display: block;
+  }
+
+}
+
+.slick-next{
+
+    &:before{
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+    
+}
+
+
+
+.no-padding{
+  padding: 0;
+}
+
+body:not(.home) header{
+  background: $bg-blue;
+}
+
+.row > .col-md-12.container-fluid {
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .row [class*="col-lg-"] + [class*="col-lg-"] {
+    margin-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .row [class*="col-md-"] + [class*="col-md-"] {
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+
+  .row [class*="col-sm-"] + [class*="col-sm-"] {
+    margin-top: 0;
+  }
+
+  .float-md-right{
+    float: right;
+  }
+}
+
+.row.no-margin [class*="col-"] + [class*="col-"] {
+  margin-top: 0;
+}
+
+
+.row.inline-grid {
+
+  font-size: 0;
+
+  [class*="col-"] {
+    vertical-align: top;
+    margin-top: 0 !important;
+    float: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-transition: padding-top .4s;
+  transition: padding-top .4s;
+}
+
+
+@include breakpoint(sm) {
+  .xs-text-center {
+    text-align: center;
+  }
+}
+
+
+/* Blocks and partials */
+@import "partials/header";
+@import "partials/page-header";
+@import "partials/first-screen";
+@import "partials/additionally";
+@import "partials/advantages";
+@import "partials/callback-block";
+@import "partials/home-description";
+@import "partials/number";
+@import "partials/service-block";
+@import "partials/second-screen";
+@import "partials/white-bg-block";
+@import "partials/absolute-text";
+@import "partials/content-page";
+
+@import "partials/reviews";
+@import "partials/projects";
+@import "partials/partners";
+@import "partials/contact-form";
+@import "partials/callback-form";
+@import "partials/modal-menu";
+
+@import "partials/footer";

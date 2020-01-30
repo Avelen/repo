@@ -1,0 +1,156 @@
+$p: 'projects';
+
+.#{$p} {
+
+	margin: 150px 0;
+
+	.container{
+		overflow: hidden;
+		position: relative;
+
+		&:before{
+			content: '';
+			width: 25%;
+			height: 100%;
+			position: absolute;
+			left: -2px;
+			top: 0;		
+			z-index: 1;	
+			background: rgba(242,242,242,1);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,242,242,1)), color-stop(100%, rgba(242,242,242,0)));
+			background: -webkit-gradient(linear, left top, right top, from(rgba(242,242,242,1)), to(rgba(242,242,242,0)));
+			background: linear-gradient(to right, rgba(242,242,242,1) 0%, rgba(242,242,242,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#f2f2f2', GradientType=1 );
+		}
+
+		&:after{
+			content: '';
+			width: 25%;
+			height: 100%;
+			position: absolute;
+			right: -2px;
+			top: 0;
+			z-index: 1;	
+			background: rgba(242,242,242,0);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,242,242,0)), color-stop(100%, rgba(242,242,242,1)));
+			background: -webkit-gradient(linear, left top, right top, from(rgba(242,242,242,0)), to(rgba(242,242,242,1)));
+			background: linear-gradient(to right, rgba(242,242,242,0) 0%, rgba(242,242,242,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#f2f2f2', GradientType=1 );			
+		}
+	}
+
+	.slick-list{
+		overflow: unset;
+	}
+
+	&__slide-block{
+
+		width: 50%;
+		margin: 60px auto!important;
+		position: unset;
+
+		&__item {
+			padding: 0 15px;
+
+			&__image{
+
+				img{
+					margin: auto;
+					padding: 10px;
+    				background: #f3f3f3;
+				}
+			}
+
+			&__caption{
+
+				padding: 0 30px;
+
+				&__title{
+					font-weight: 600;
+				} 
+
+				&__description{
+					font-size: 14px;
+				}
+
+			}
+
+		}
+
+	}
+
+	.slick-next{
+		right: 0;
+	}
+
+	.slick-prev{
+		left: 0;
+	}
+
+	.slick-dots{
+		left: 0;
+		right: 0;
+		bottom: 10%;
+
+		li{
+			button{
+				&:before{
+					font-size: 8px;
+					color: $text-link-hover;
+					opacity: 1;
+				}				
+			}
+		}
+
+		.slick-active{
+
+			button{
+				&:before{
+					content: '';
+					width: 10px;
+					height: 10px;
+					border: 2px solid $text-link-hover;
+					margin-top: 4px;
+				    border-radius: 10px;
+				    margin-left: 5px;
+				}
+			}
+
+		}
+			
+	}
+	
+
+	&__button-block{
+
+	border-color: $text-link-hover;
+
+
+		&__button{
+
+			color: $text-link-hover;
+			border-color: $text-link-hover;				
+
+			a{
+				color: $text-link-hover;
+
+				&:hover{
+					color: $text-default;
+				}
+			}
+
+			&:hover{
+
+				a{
+					color: $text-default;
+				}
+			}
+
+		}
+
+	}
+	
+
+	
+
+}

@@ -1,0 +1,30 @@
+/* Background colors */
+$bg-default: #f3f3f3;
+$bg-white: #FFFFFF;
+$bg-blue: #2e9aff;
+$bg-yellow: #ffc000;
+$bg-partner: #d6ebff;
+$bg-button-default: #2e9bff;
+$bg-black: #000;
+
+/* Text colors */
+$text-default: #000;
+$text-sub: #888;
+$text-white: #FFFFFF;
+$text-link: #001a33;
+$text-link-hover: #2e9bff;
+
+/* Border colors */
+$top-default: #97cdff;
+
+/* Box shadow */
+$shadow: rgba(51, 51, 51, 0.5);
+
+/* Gradient */
+%blue-gradient{
+	background: rgba(16,90,159,1);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(16,90,159,1)), color-stop(100%, rgba(46,154,255,1)));
+	background: -webkit-gradient(linear, left top, right top, from(rgba(16,90,159,1)), to(rgba(46,154,255,1)));
+	background: linear-gradient(to right, rgba(16,90,159,1) 0%, rgba(46,154,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#105a9f', endColorstr='#2e9aff', GradientType=1 );
+}

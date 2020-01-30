@@ -1,0 +1,52 @@
+$c: 'second-screen';
+
+.#{$c} {
+
+	&__white-bg-block{
+
+		@extend %white-bg-block;
+
+	    &__catalog{
+	    	padding: 30px 0 0;
+
+	    	&__title{
+	    		position: absolute;
+			    top: 20px;
+			    left: 40px;
+			    text-shadow: 0 0 10px #333;
+
+			    &:after{
+			    	content: '';
+			    	position: absolute;
+			    	width: 50px;
+			    	height: 2px;
+			    	background: $bg-yellow;
+			    	bottom: -10px;
+			    	left: 0;
+			    }
+	    	}
+
+	    	.first-title{
+	    		font-size: 48px;
+	    		line-height: 50px;
+    			font-weight: 500; 
+	    	}
+
+	    	.second-title{
+	    		font-size: 24px;
+	    		line-height: 28px;
+    			font-weight: 500; 
+	    	}
+
+	    	.float-md-right{
+	    		margin-top: 4px!important;
+	    	}
+
+	    	img{
+	    		width: 100%;
+	    		margin-bottom: 25px;
+	    	}
+	    }
+	}
+
+}

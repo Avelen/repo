@@ -1,0 +1,108 @@
+$r: 'reviews';
+
+.#{$r} {
+
+	&__white-bg-block{
+		@extend %white-bg-block;
+		position: relative;
+		margin-top: 80px;
+
+		&:before{
+			content: '';
+		    width: 115px;
+		    height: 100px;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+		    top: -40px;
+		    background: url(../../img/blaquote.png)no-repeat center;
+		    display: block;
+		    position: absolute;
+		}
+
+		&__slider-review{
+
+			&__review-item{
+
+				&__author{
+					margin: 30px 0 20px;
+				    font-size: 24px;
+				    font-weight: 600;
+				    position: relative;
+
+					&:before{
+					    content: '';
+					    width: 50px;
+					    background: $bg-yellow;
+					    height: 2px;
+					    position: absolute;
+					    left: 0;
+					    right: 0;
+					    bottom: -10px;
+					    margin: auto;
+					}
+				}
+
+				&__content{
+					width: 65%;
+				    margin: auto;
+				    font-size: 14px;
+				    color: $text-sub;
+				}
+
+			}
+
+			.slick-dots{
+				display: none!important;
+			}
+
+
+		}
+
+		&__button-group{
+
+			&__button{
+
+				color: $text-link-hover;
+				border-color: $text-link-hover;				
+
+				a{
+					color: $text-link-hover;
+
+					&:hover{
+						color: $text-default;
+					}
+				}
+
+				&:hover{
+
+					a{
+						color: $text-default;
+					}
+				}
+
+			}
+
+		}
+	}
+
+	&.children-page{
+		.reviews__white-bg-block{
+			margin-top: 0;
+
+			&:before{		
+				content: '';
+			    width: 115px;
+			    height: 100px;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+			    top: -40px;
+			    display: block;
+			    position: absolute;		
+			    background: url(../../img/blaquote-child.png)no-repeat center;			    
+			}
+		}
+	}
+
+}

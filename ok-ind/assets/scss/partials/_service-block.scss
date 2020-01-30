@@ -1,0 +1,41 @@
+$s: 'service-block';
+
+.#{$s} {
+
+	&__white-bg-block{
+
+		@extend %white-bg-block;
+
+		&__item{
+
+			@extend %blue-gradient;
+			padding: 20px 20px 30px;
+			margin-top: 30px;
+
+			&__title{
+				position: relative;
+				margin: 0 0 20px;
+
+				&:before{
+					content: '';
+				    width: 50px;
+				    background: $bg-yellow;
+				    height: 2px;
+				    position: absolute;
+				    left: 0;
+				    right: 0;
+				    bottom: -10px;
+				}
+
+			}
+
+			&__description{
+				font-size: 14px;
+			}
+
+
+		}
+
+	}
+
+}

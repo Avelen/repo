@@ -1,0 +1,27 @@
+$h: 'home-description';
+
+.#{$h} {
+
+	background: $bg-white;
+
+	&__caption{
+		padding: 20% 80px;
+
+		&__gray-border{
+			position: absolute;
+		    width: 110%;
+		    height: 80%;
+		    background: transparent;
+		    border: 10px solid rgba(230, 230, 230, 0.5);
+		    left: -75%;
+		    top: 10%;
+		}
+
+		&__white-bg-block{
+			background: $bg-white;
+			position: relative;
+		    padding: 10px 0;
+		}
+	}
+
+}

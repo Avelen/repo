@@ -1,0 +1,48 @@
+$a: 'additionally';
+
+.#{$a} {
+
+	padding: 160px 0;
+    max-width: 1400px;
+    margin: auto;
+
+
+    &__item{
+    	position: relative;
+
+    	&.href{
+    		cursor: pointer;
+
+    		&:hover{
+    			opacity: 0.5;
+    		}
+    	}
+
+    	img{
+    		margin-top: 30px;
+    		margin-bottom: 10px;
+    	}
+
+    	&__title{
+
+    		padding: 0 20px;
+		    display: inline-block;
+		    float: right;
+		    background: $bg-default;
+		    font-weight: 600;
+
+		    &:before{
+		    	content: '';
+			    width: 70%;
+			    height: 2px;
+			    background: #ffc000;
+			    display: block;
+			    left: 35px;
+			    position: absolute;
+			    z-index: -1;
+			    bottom: 10px;
+		    }
+    	}
+    }
+
+}
